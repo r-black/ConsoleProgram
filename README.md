@@ -3,6 +3,7 @@
 ## Build Setup
 
 ``` bash (linux)
+$ sudo apt-get install libboost-all-dev
 $ cd ConsoleProgram/
 $ mkdir build
 $ cd build/
