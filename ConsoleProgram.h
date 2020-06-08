@@ -14,7 +14,7 @@ public:
 
     int exec();
 
-    size_t words(std::ifstream& ifs, std::string str);
+    size_t wordsCount(std::ifstream& ifs, const std::string str);
 
     uint32_t checksum(std::ifstream& ifs);
 
@@ -26,6 +26,7 @@ private:
     // Требуемые в программе переменные для работы с опциями
     std::string m_inputFilePath;
     std::string m_inputWord;
+    std::string m_nameMethod;
 };
 
 
