@@ -9,7 +9,7 @@ $ cd build/
 $ cmake ..
 $ make
 ```
-# run app
+``` run app
 $ ./app -f ../Test.tst -m words -v mother
 # печатает количество слов «mother» в файле «Test.tst»
 
