@@ -3,13 +3,14 @@
 ## Build Setup
 
 ``` bash (linux)
+$ sudo apt-get install libboost-all-dev
 $ cd ConsoleProgram/
 $ mkdir build
 $ cd build/
 $ cmake ..
 $ make
 ```
-# run app
+``` run app
 $ ./app -f ../Test.tst -m words -v mother
 # печатает количество слов «mother» в файле «Test.tst»
 
