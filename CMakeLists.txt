@@ -1,17 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
+
+# The project name
 project(app)
 
-set(CMAKE_CXX_STANDARD 11)
-
-find_package(Boost 1.58.0 COMPONENTS program_options)
-
-set(SOURCE_FILES
-        main.cpp
-        ConsoleProgram.cpp
-        ConsoleProgram.h)
-
-if(Boost_FOUND)
-    include_directories(${Boost_INCLUDE_DIRS})
-    add_executable(app ${SOURCE_FILES})
-    target_link_libraries(app ${Boost_LIBRARIES})
+if (MSVC)
+    # warning level 4 and all warnings as errors
+    add_compile_options(/W4 /WX)
+else()
+    # lots of warnings and all warnings as errors
+    add_compile_options(-Wall -Wextra -pedantic -Werror)
 endif()
+
+add_subdirectory(thirdparty/catch)
+add_subdirectory(src)
+add_subdirectory(test)
