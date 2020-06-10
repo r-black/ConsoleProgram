@@ -19,14 +19,15 @@ public:
     uint32_t checksum(std::ifstream& ifs);
 
 private:
-    // Описание доступных опций
-    po::options_description m_desc {"Allowed options"};
-    po::variables_map m_vm; // контейнер для сохранения выбранных опций программы
+    // Description of available options
+    po::options_description description_ {"Allowed options"};
+    // container for saving selected program options
+    po::variables_map variablesMap_; 
 
-    // Требуемые в программе переменные для работы с опциями
-    std::string m_inputFilePath;
-    std::string m_inputWord;
-    std::string m_nameMethod;
+    // Variables required for the program to work with options
+    std::string inputFilePath_;
+    std::string inputWord_;
+    std::string nameMethod_;
 };
 
 

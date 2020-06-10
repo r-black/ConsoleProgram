@@ -5,8 +5,7 @@
 
 int main(int argc, const char* argv[])
 {
-    try 
-    {
+    try {
         ConsoleProgram app(argc, argv);
         return app.exec();
     }
@@ -16,6 +15,6 @@ int main(int argc, const char* argv[])
     }
     catch(...) {
         std::cerr << "Exception of unknown type!\n";
-    return 1;
+        return 1;
     }
 }
